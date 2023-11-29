@@ -156,6 +156,7 @@
             this.Controls.Add(this.btn_Show);
             this.Name = "frmSinhVien";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSinhVien_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_SinhVien)).EndInit();
             this.ResumeLayout(false);

@@ -167,6 +167,15 @@ namespace Test
             }
         }
 
+        private void frmSinhVien_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+            frmDangNhap frmDN = new frmDangNhap();
+            frmDN.ShowDialog();
+            this.Close();
+            
+        }
+
 
     }
 }

@@ -7,3 +7,4 @@ E:\LuuDuLieuSinhVien\2001207422_HuynhHuuDuc\NETBuoi11\Test\obj\Debug\Test.csproj
 E:\LuuDuLieuSinhVien\2001207422_HuynhHuuDuc\NETBuoi11\Test\obj\Debug\Test.exe
 E:\LuuDuLieuSinhVien\2001207422_HuynhHuuDuc\NETBuoi11\Test\obj\Debug\Test.pdb
 E:\LuuDuLieuSinhVien\2001207422_HuynhHuuDuc\NETBuoi11\Test\obj\Debug\Test.frmSinhVien.resources
+E:\LuuDuLieuSinhVien\2001207422_HuynhHuuDuc\NETBuoi11\Test\obj\Debug\Test.frmDangNhap.resources
