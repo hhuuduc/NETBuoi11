@@ -119,15 +119,23 @@ namespace Test
             {
                 try
                 {
-                    SqlConnection conn = new SqlConnection(conStr);
-                    conn.Open();
-                    string sql = "update SINHVIEN set HOTEN = N'" + txt_HoTen.Text + "' where MASV = " + Convert.ToInt32(txt_Ma.Text) + "";
-                    SqlCommand cmd = new SqlCommand(sql, conn);
-                    cmd.CommandType = CommandType.Text;
-                    cmd.ExecuteNonQuery();
-                    conn.Close();
-                    Clear();
-                    MessageBox.Show("Sửa thông tin sinh viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if(Convert.ToInt32(dtgv_SinhVien.Rows[dtgv_SinhVien.CurrentRow.Index].Cells[0].Value.ToString()) == Convert.ToInt32(txt_Ma.Text))
+                    {
+                        SqlConnection conn = new SqlConnection(conStr);
+                        conn.Open();
+                        string sql = "update SINHVIEN set HOTEN = N'" + txt_HoTen.Text + "' where MASV = " + Convert.ToInt32(txt_Ma.Text) + "";
+                        SqlCommand cmd = new SqlCommand(sql, conn);
+                        cmd.CommandType = CommandType.Text;
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                        Clear();
+                        MessageBox.Show("Sửa thông tin sinh viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mã sinh viên không được sửa !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txt_Ma.Text = dtgv_SinhVien.Rows[dtgv_SinhVien.CurrentRow.Index].Cells[0].Value.ToString();
+                    }
                 }
                 catch (Exception ex)
                 {
